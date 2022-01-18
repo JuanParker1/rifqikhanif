@@ -1,12 +1,6 @@
 FROM node:16.13.0
 
-RUN apt-get update && \
-  apt-get install -y \
-  neofetch \
-  ffmpeg \
-  wget \
-  chromium \ 
-  imagemagick && \
+RUN apt-get update
 
 COPY package.json .
 RUN npm install -g npm@latest
